@@ -1,0 +1,36 @@
+---
+title: "Portfolio"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, results="asis"}
+library(readxl)
+
+p<-read_excel("portfolio.xlsx",sheet="portfolio")
+
+categories<-c("Animals")
+
+for (c in categories){
+  #Category Subset
+  psub<-subset(p,Category=="Animals")
+
+  #Printing Category
+  cat("#"," **", c, "** ", "\n","\n",sep="")
+  
+  for (r in 1:nrow(psub)){
+    #Entry Subset
+    e<-psub[r,]
+    
+    #Subset Vectors
+    desc<-e$Description
+    photo<-paste("![",desc,"](portfolio/",e$Filename,".jpg)",sep="")
+    
+    cat(photo,"\n","\n")
+  }
+}
+
+```
