@@ -1,6 +1,8 @@
 .container-fluid.main-container {
   background-color: #ffffff !important;
   padding-bottom: 5px;
+  background: none;
+
 }
 
 body {
@@ -9,9 +11,14 @@ body {
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url(photos/Daryl_painting.jpg);
+  background-image: url(portfolio/Animals_MyPassion.jpg);
   background-repeat: no-repeat;
   margin-bottom: 0px;
+}
+
+table, th, td {
+  border: 0px solid black;
+  object-position: center;
 }
 
 .navbar-brand {
@@ -30,9 +37,11 @@ body {
   font-size: 14px;
 }
 
-.contact {
-  text-align: center;
-  background: white;
-  padding: 30px;
-  padding-left: 250px;
+.center-cropped {
+  object-fit: cover;
+  object-position: center;
+  height: 200px;
+  width: 200px;
 }
+
+

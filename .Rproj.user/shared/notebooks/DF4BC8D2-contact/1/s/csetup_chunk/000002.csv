@@ -1,0 +1,23 @@
+"0","library(icons)
+"
+"2","[30m-- [1mInstalled icons[22m ------------------------------------------------------------------------------------------------------------------------ icon 0.2.0 --[39m
+"
+"2","[30m[31mx[30m [34mionicons[30m                   [31mx[30m [34mgoogle_material[30m       
+[32mv[30m [34macademicons[30m     1.9.1      [31mx[30m [34mfeather_icons[30m         
+[32mv[30m [34msimple_icons[30m    5.14.0     [31mx[30m [34mocticons[30m              
+[32mv[30m [34mbioicons[30m        1.0.0      [32mv[30m [34mfontawesome[30m     5.15.4[39m
+"
+"2","Warning messages:
+"
+"2","1: "
+"2","In readLines(index, encoding = encoding) :"
+"2","
+ "
+"2"," incomplete final line found on 'C:/Users/zack_/OneDrive/Projects/mooremanordesigns.github.io/index.Rmd'
+"
+"2","2: "
+"2","In readLines(index, encoding = encoding) :"
+"2","
+ "
+"2"," incomplete final line found on 'C:/Users/zack_/OneDrive/Projects/mooremanordesigns.github.io/index.Rmd'
+"
