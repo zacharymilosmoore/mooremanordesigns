@@ -1,0 +1,47 @@
+.container-fluid.main-container {
+  background-color: #ffffff !important;
+  padding-bottom: 5px;
+  background: none;
+
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5em ;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(https://zacharymilosmoore.github.io/mooremanordesigns/portfolio/Animals_MyPassion.JPG);
+  background-repeat: no-repeat;
+  margin-bottom: 0px;
+}
+
+table, th, td {
+  border: 0px solid black;
+  object-position: center;
+}
+
+.navbar-brand {
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 35px;
+  margin-left: 5px;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  color: black;
+  font-size: 14px;
+}
+
+.center-cropped {
+  object-fit: cover;
+  object-position: center;
+  height: 200px;
+  width: 200px;
+}
+
+

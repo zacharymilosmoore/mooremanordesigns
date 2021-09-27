@@ -1,0 +1,17 @@
+name: "Moore Manor Designs"
+
+navbar:
+  title: "Moore Manor Designs"
+  left:
+    - text: "Contact"
+      href: index.html
+    - text: "The Artist"
+      href: about.html
+    - text: "Portfolio"
+      href: portfolio.html
+      
+output:
+  html_document:
+    theme: sandstone
+    css: mystyles.css
+output_dir: "docs"

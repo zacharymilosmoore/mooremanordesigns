@@ -57,8 +57,8 @@ p<-read_excel("portfolio.xlsx",sheet="portfolio")
           
           #Subset Vectors
             desc<-paste("<i>",e$Title,"</i>")
-            photo<-paste("portfolio/",e$Filename,".jpg",sep="")
-            thumb<-paste("portfolio_thumb/",e$Filename,".jpg",sep="")
+            photo<-paste("https://zacharymilosmoore.github.io/mooremanordesigns/portfolio/",e$Filename,".jpg",sep="")
+            thumb<-paste("https://zacharymilosmoore.github.io/mooremanordesigns/portfolio_thumb/",e$Filename,".jpg",sep="")
             
             image<-paste("<img class='center-cropped' src=",thumb,">")
             link<-paste(a_link,photo,">",sep="")
