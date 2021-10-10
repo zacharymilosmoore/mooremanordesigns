@@ -37,8 +37,8 @@ p<-read_excel("portfolio.xlsx",sheet="portfolio")
         psub<-subset(p,Category==c)
         
       #Vector for which picture to start new rows in output
-        s<-seq(1,length(psub$Category),by=3)
-        e<-seq(3,length(psub$Category),by=3)
+        st<-seq(1,length(psub$Category),by=3)
+        en<-seq(3,length(psub$Category),by=3)
     
       #Printing Category Title
         cat("#"," **", c, "** ",space,t_s,space,sep="")
@@ -49,7 +49,7 @@ p<-read_excel("portfolio.xlsx",sheet="portfolio")
             e<-psub[r,]
       
           #If entry is one of the desired new rows, make new row, else just a new column. 
-            if (r %in% s) {
+            if (r %in% st) {
               cat(tr_s,space,td_s)
             } else {
               cat(td_s)    
@@ -67,7 +67,7 @@ p<-read_excel("portfolio.xlsx",sheet="portfolio")
             cat(link,image,a,space,desc,td_e)
             
           #If entry is one of the ends of the rows, make new row, else do nothing. 
-            if (r %in% e) {
+            if (r %in% en) {
               cat(tr_e,space)
             } else {}  
         }
