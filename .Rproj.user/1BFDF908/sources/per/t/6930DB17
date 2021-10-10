@@ -1,14 +1,14 @@
 {
-    "id": "C23130EC",
+    "id": "6930DB17",
     "path": "C:/Users/zack_/OneDrive/Projects/mooremanordesigns.github.io/about.Rmd",
     "project_path": "about.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "3145648348",
     "contents": "",
-    "dirty": true,
-    "created": 1632684357011.0,
+    "dirty": false,
+    "created": 1633883510229.0,
     "source_on_save": false,
-    "relative_order": 3,
+    "relative_order": 8,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
@@ -16,11 +16,11 @@
         "scrollLine": "16"
     },
     "folds": "",
-    "lastKnownWriteTime": 1632747456,
+    "lastKnownWriteTime": 1632747662,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1632747464699,
+    "last_content_update": 1632747662,
     "read_only": false,
     "read_only_alternatives": []
 }
