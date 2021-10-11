@@ -1,2 +1,2 @@
-# mooremanordesigns.github.io
+# mooremanordesigns
  Artist portfolio website
