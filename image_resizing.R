@@ -11,7 +11,8 @@ library(imager)
   images<-as.vector(interaction(levels(as.factor(p$Filename)),"jpg"))
     #Only updating those without existing thumbnails to save time
     images<-images[-which(file.exists(paste("portfolio_thumb/",images,sep=""))==T)]
-  
+    images
+    
   input<-"portfolio_org/"
   output<-"portfolio_thumb/"
   output2<-"portfolio_photos/"
