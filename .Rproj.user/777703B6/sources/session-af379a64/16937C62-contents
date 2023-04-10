@@ -1,0 +1,82 @@
+#Code to Resize Images from Larger jpegs to Thumbnails
+
+#Admin####
+library(readxl)
+library(imager)
+library(magick)
+
+#Vectors & Data####
+  p<-read_excel("portfolio.xlsx",sheet="portfolio")
+    p<-subset(p,Include=="Yes")
+    p$Filename<-interaction(p$Filename,"jpg")
+  
+  images<-as.vector(levels(as.factor(p$Filename)))
+  
+  #Only updating those without existing thumbnails to save time
+  #images<-images[-which(file.exists(paste("portfolio_thumb/",images,sep=""))==T)]
+  images
+    
+  input<-"portfolio_org/"
+  output<-"portfolio_thumb/"
+  output2<-"portfolio_photos/"
+
+#Loop Through Images
+  
+  for(i in images){
+    input_name<-paste(input,i,sep="")
+    output_name<-paste(output,i,sep="")
+    output2_name<-paste(output2,i,sep="")
+    info<-p[which(p$Filename==i),]
+    
+    #Read image
+    im<-image_read(input_name)
+      
+    #Thumbnail  
+    thmb<-image_resize(im, geometry = "x500")
+    
+    if(info$Status.Sale %in% c("FOR SALE","ASK FOR PRICING")) {
+      text<-""
+    } else {
+      text<-info$Status.Sale
+    }
+
+    thmb<-image_annotate(
+      thmb, 
+      text = text, 
+      size = 45, 
+      color = "white",
+      degrees = 45, 
+      gravity = "Center",
+      font = "Times"
+    )
+    
+    #Pop-up
+    alt<-image_resize(im, geometry = "x2000")
+    alt<-image_border(alt, color = "black", geometry = "50x50")
+    
+    if(info$Status.Sale == "FOR SALE") {
+      price<-paste("$",info$Price.Size,sep="")
+    } else {
+      price<-info$Status.Sale
+    }
+    
+    alt<-image_annotate(
+      alt, 
+      text = paste(
+        info$Title,
+        info$Year,
+        info$Dimensions,
+        price,
+        sep=" - "),
+      color = "white",
+      size = 45,
+      gravity = "SouthEast",
+      font = "Times"
+    )
+
+    #Save to File
+    image_write(thmb, path = output_name, format = "jpg", quality = 100)
+    image_write(alt, path = output2_name, format = "jpg", quality = 100)
+
+  }
+  
